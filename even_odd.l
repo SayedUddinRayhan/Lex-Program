@@ -1,0 +1,23 @@
+/% Lex Program to check whether
+	- input number is odd or even. %/
+
+% {
+int i;
+% }
+
+%%
+[0-9]+ {i = atoi(yytext);
+
+if(i%2==0)
+printf("Input Number is Even");
+
+else
+printf("Input Number is Odd");
+};
+
+%%
+int main()
+{
+	yylex();
+	return 1;
+}
